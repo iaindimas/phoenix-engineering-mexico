@@ -1,66 +1,33 @@
-# Phoenix Engineering Services México
+# Phoenix: HTML, CSS y JavaScript separados por clases
 
-Código fuente completo del sitio corporativo, preparado para editarse en Visual Studio Code.
+## Ejecutar
 
-## Estructura
+1. Extrae TODO el ZIP; no abras index.html desde dentro del ZIP.
+2. Conserva index.html junto a las carpetas css, js y assets.
+3. Haz doble clic en index.html. No necesitas Node, npm ni React.
 
-```text
-phoenix-engineering-html/
-├── index.html
-├── README.md
-└── assets/
-    ├── css/
-    │   └── styles.css
-    └── js/
-        └── script.js
-```
+También puedes abrir la carpeta en VS Code y usar Live Server. Si ya tienes Python, ejecuta `python -m http.server 8000` en esta carpeta y abre http://localhost:8000.
 
-## Cómo abrir el sitio
+## Archivos
 
-1. Descomprime la carpeta.
-2. Ábrela en Visual Studio Code mediante **Archivo > Abrir carpeta**.
-3. Abre `index.html` directamente en el navegador o utiliza la extensión **Live Server**.
+- index.html: contenido completo del inicio, encabezado y pie. Visible incluso sin JavaScript.
+- css/styles.css: clases CSS, colores, tamaños y adaptación a móvil.
+- js/Utilidades.js: clase Utilidades; escape de texto y descarga.
+- js/Diagnostico.js: clase Diagnostico; preguntas, validación y cálculo.
+- js/Resultados.js: clase Resultados; diagnóstico, plan y exportación.
+- js/Contacto.js: clase Contacto; formulario y solicitud descargable.
+- js/Aplicacion.js: clase Aplicacion; navegación y eventos.
+- js/main.js: inicia la aplicación.
+- assets/: fotografía y favicon.
 
-No requiere instalación, compilación ni dependencias.
+## Comprobar
 
-## Qué archivo debes modificar
+Prueba el menú, completa las 12 preguntas, verifica los resultados, descarga el plan y descarga una solicitud. Presiona F12 y revisa Console si algo falla.
 
-- `index.html`: textos, secciones, servicios, proyectos y formulario.
-- `assets/css/styles.css`: colores, tipografías, tamaños, espacios y diseño adaptable.
-- `assets/js/script.js`: menú para celular, animaciones y comportamiento del formulario.
+## GitHub Pages
 
-## Cambiar los colores principales
+Sube index.html y las tres carpetas completas a la raíz de tu repositorio. En Settings → Pages selecciona Deploy from a branch → main → /(root) → Save.
 
-Al inicio de `assets/css/styles.css` están las variables globales:
+## Datos
 
-```css
-:root {
-  --ink: #07111f;
-  --blue: #3f73ff;
-  --cyan: #7be7ff;
-  --orange: #ff6a35;
-}
-```
-
-Al modificar una variable, el color cambia en todo el sitio.
-
-## Clases principales
-
-| Clase                  | Función                            |
-| ---------------------- | ---------------------------------- |
-| `.shell`               | Limita y centra el contenido       |
-| `.site-header`         | Encabezado principal               |
-| `.nav` y `.nav-links`  | Menú de navegación                 |
-| `.hero`                | Portada del sitio                  |
-| `.section`             | Espaciado general de cada sección  |
-| `.section-heading`     | Encabezados de sección             |
-| `.service-grid`        | Distribución de servicios          |
-| `.service-card`        | Tarjetas individuales de servicios |
-| `.process`             | Pasos de la metodología            |
-| `.project-placeholder` | Sección escalable de proyectos     |
-| `.contact-form`        | Formulario de contacto             |
-| `.reveal`              | Animación al desplazarse           |
-
-## Formulario
-
-Actualmente el formulario prepara la solicitud y la copia al portapapeles. Para enviarla automáticamente será necesario conectarlo posteriormente con un correo, WhatsApp o servicio de formularios.
+Las respuestas permanecen en memoria mientras la página está abierta. Al recargar, el diagnóstico se reinicia. El formulario descarga un archivo; no envía datos, correos ni WhatsApp. Las fuentes tienen respaldo local si Google Fonts no carga.
